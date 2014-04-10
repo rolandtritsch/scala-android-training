@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.tritsch.scala.android.training"
+    android:versionCode="1"
+    android:versionName="1.0"
+    >
+  <uses-sdk android:minSdkVersion="19" />
+  <application
+      android:label="@string/app_name"
+      android:icon="@drawable/ic_launcher"
+      android:theme="@android:style/Theme.Holo"
+      android:uiOptions="splitActionBarWhenNarrow"
+      >
+    <activity
+	android:name=".TrainingExercises"
+        android:label="@string/app_name"
+	>
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".first.FirstActivity"
+        android:label="@string/first_name"
+        android:parentActivityName=".TrainingExercises"
+	>
+    </activity>
+    <activity
+        android:name=".first.DisplayMessageActivity"
+        android:parentActivityName=".first.FirstActivity"
+	>
+    </activity>
+    <activity
+        android:name=".action.ActionBarActivity"
+        android:label="@string/action_name"
+        android:parentActivityName=".TrainingExercises"
+	>
+    </activity>
+    <activity
+	android:name=".lifecycle.ActivityA"
+        android:label="@string/lifecycle_name"
+        android:parentActivityName=".TrainingExercises"
+	android:launchMode="singleTask"
+	/>
+    <activity android:name=".lifecycle.ActivityB"/>
+    <activity android:name=".lifecycle.ActivityC"/>
+    <activity android:name=".lifecycle.DialogActivity" android:theme="@android:style/Theme.Dialog"/>
+  </application>
+</manifest>
